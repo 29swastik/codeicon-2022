@@ -4,9 +4,13 @@ var app = express();
 app.use(express.static('views'));
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.render('pages/3d');
 });
+
+app.get('/ar', function (req, res) {
+    res.render('/pages/ar');
+})
 
 
 app.listen(8999);
