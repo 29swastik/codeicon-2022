@@ -4,12 +4,16 @@ var app = express();
 app.use(express.static('views'));
 app.set('view engine', 'ejs');
 
-app.get('/', function (req, res) {
-    res.render('pages/3d');
+app.get('/3d/:url', function (req, res) {
+    res.render('pages/3d', {
+        url: req.params.url
+    });
 });
 
-app.get('/ar', function (req, res) {
-    res.render('/pages/ar');
+app.get('/ar/:url', function (req, res) {
+    res.render('/pages/ar', {
+        url: req.params.url
+    });
 })
 
 

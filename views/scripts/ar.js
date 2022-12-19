@@ -100,7 +100,7 @@ var createScene = async function () {
     const xrTest = fm.enableFeature(BABYLON.WebXRHitTest.Name, "latest");
 
     // Load the 3D model to be added in AR
-    var model = await BABYLON.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "SheenChair.glb", scene);
+    var model = await BABYLON.SceneLoader.ImportMeshAsync("", "https://cdn.jsdelivr.net/gh/29swastik/codeicon-2022@3f6a8352ba1a93a724c5705999afb1aa9b6f18a5/", "victorian_style_sofa.glb", scene);
     var b = model.meshes[0];
 
     //Clone the mesh to create a ghost mesh that will used for positionning

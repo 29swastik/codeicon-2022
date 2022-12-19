@@ -20,13 +20,11 @@ var createDefaultEngine = function () {
 };
 var delayCreateScene = function () {
     var scene = new BABYLON.Scene(engine);
-
-    BABYLON.SceneLoader.Append("http://127.0.0.1:8081/", "scene.gltf", scene, function (scene) {
+    BABYLON.SceneLoader.Append("https://cdn.jsdelivr.net/gh/29swastik/codeicon-2022@8d6fb0898c59f4c22b38ded876093eaecd290ff2/", "victorian_chair.glb", scene, function (scene) {
         scene.createDefaultCameraOrLight(true, true, true);
         scene.activeCamera.alpha += Math.PI;
     });
-
-
+    scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
     return scene;
 };
 window.initFunction = async function () {
