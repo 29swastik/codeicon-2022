@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const PORT = process.env.PORT || 8999;
 
 app.use(express.static('views'));
 app.set('view engine', 'ejs');
@@ -17,5 +18,6 @@ app.get('/ar/:url', function (req, res) {
 })
 
 
-app.listen(8999);
-console.log('Server running on 8999');
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
