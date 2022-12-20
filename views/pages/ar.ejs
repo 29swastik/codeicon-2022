@@ -95,40 +95,40 @@
 
             var rectangle = new BABYLON.GUI.Rectangle("rect");
             rectangle.background = "black";
-            rectangle.color = "blue";
+            rectangle.color = "white";
             rectangle.width = "80%";
-            rectangle.height = "50%";
+            rectangle.height = "80%";
 
             advancedTexture.addControl(rectangle);
             var nonXRPanel = new BABYLON.GUI.StackPanel();
             rectangle.addControl(nonXRPanel);
 
             if (!arAvailable) {
-                const text1 = new BABYLON.GUI.TextBlock("text1");
-                text1.fontFamily = "Helvetica";
-                text1.textWrapping = true;
-                text1.text = "AR not supported for this device";
-                text1.color = "white";
-                text1.fontSize = "20px";
-                text1.height = "100px"
+                const text_msg = new BABYLON.GUI.TextBlock("text1");
+                text_msg.fontFamily = "Helvetica";
+                text_msg.textWrapping = true;
+                text_msg.text = "AR not supported for this device";
+                text_msg.color = "white";
+                text_msg.fontSize = "20px";
+                text_msg.height = "100px"
 
-                text1.paddingLeft = "10px";
-                text1.paddingRight = "10px";
-                nonXRPanel.addControl(text1);
+                text_msg.paddingLeft = "10px";
+                text_msg.paddingRight = "10px";
+                nonXRPanel.addControl(text_msg);
 
                 return scene;
             } else {
-                const text1 = new BABYLON.GUI.TextBlock("text1");
-                text1.fontFamily = "Helvetica";
-                text1.textWrapping = true;
-                text1.text = "click on the AR icon in bottom right corner to enter AR world. After Entering AR world hold your mobile device such that it points to floor/door/wall and when an Image/Model appears on screen search for proper position to place the Model by clicking on it";
-                text1.color = "white";
-                text1.fontSize = "18px";
-                text1.height = "400px"
+                const text_msg = new BABYLON.GUI.TextBlock("text1");
+                text_msg.fontFamily = "Helvetica";
+                text_msg.textWrapping = true;
+                text_msg.text = "click on the AR icon in bottom right corner to enter AR world. After Entering AR world hold your mobile device such that your floor/ground is within the frame and when an Image/Model appears on screen search for proper position to place the Model by clicking on it";
+                text_msg.color = "white";
+                text_msg.fontSize = "24px";
+                text_msg.height = "400px"
 
-                text1.paddingLeft = "10px";
-                text1.paddingRight = "10px";
-                nonXRPanel.addControl(text1);
+                text_msg.paddingLeft = "10px";
+                text_msg.paddingRight = "10px";
+                nonXRPanel.addControl(text_msg);
             }
 
             // Create the WebXR Experience Helper for an AR Session (it initializes the XR scene, creates an XR Camera, 
